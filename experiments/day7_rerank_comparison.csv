@@ -1,0 +1,4 @@
+﻿metric,vector_only,vector_plus_rerank
+Faithfulness,0.8883333333333333,0.8657142857142857
+ContextPrecision,0.89999999997,0.89999999997
+ContextRecall,1.0,1.0

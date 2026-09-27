@@ -1,0 +1,10 @@
+﻿config_name,recall@5,mrr,avg_latency_ms,total_chunks_evaluated
+fixed_512_0,0.3,0.2667,9.05,20
+fixed_512_50,0.25,0.225,2.58,20
+fixed_1024_0,0.3,0.275,2.58,20
+markdown_recursive_512_0,0.3,0.2292,2.65,20
+markdown_recursive_512_100,0.25,0.2167,2.82,20
+markdown_recursive_1024_0,0.3,0.2417,2.9,20
+markdown_recursive_1024_50,0.25,0.25,2.92,20
+markdown_recursive_2048_0,0.3,0.25,2.95,20
+recursive_512_0,0.3,0.3,2.88,20

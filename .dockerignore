@@ -1,0 +1,36 @@
+# Python 虚拟环境，镜像里会重新装
+.venv/
+venv/
+.env-1/
+venv-1/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Git 相关
+.git/
+.gitignore
+
+# 本地向量库数据（太大，不进镜像）
+chroma_db/
+
+# 敏感文件
+.env
+
+# 实验过程和临时数据（保留实验记录 md 和 csv，但排除大文件）
+data/raw/
+data/day2_raw/
+data/day2_pdfs/
+data/day3_outputs/
+data/day3_challenge/
+data/day3_variant_outputs/
+
+# VSCode 配置
+.vscode/
+
+# 系统文件
+.DS_Store
+Thumbs.db

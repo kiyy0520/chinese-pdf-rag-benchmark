@@ -1,0 +1,122 @@
+[
+  {
+    "question": "什么是随机过程？",
+    "ground_truth": "随机过程是一个或多个事件、随机系统或者随机现象随时间发生演变的过程",
+    "source_context": "随机过程是一个或多个事件、随机系统或者随机现象随时间发生演变的过程",
+    "difficulty": "easy"
+  },
+  {
+    "question": "什么是马尔可夫过程？",
+    "ground_truth": "马尔可夫过程是具有马尔可夫性质的随机过程",
+    "source_context": "马尔可夫过程 (Markov Process) 是具有马尔可夫性质的随机过程",
+    "difficulty": "easy"
+  },
+  {
+    "question": "马尔可夫决策过程（MDP）可以由哪五元组表示？",
+    "ground_truth": "MDP可以由五元组 (S, A, {P_{sa}}, γ, R) 表示",
+    "source_context": "MDP可以由一个五元组表示 (S, A, {P_{sa}}, γ, R)",
+    "difficulty": "easy"
+  },
+  {
+    "question": "在MDP的五元组中，γ代表什么？",
+    "ground_truth": "γ ∈ [0,1] 是对未来奖励的折扣因子",
+    "source_context": "γ ∈ [0,1] 是对未来奖励的折扣因子",
+    "difficulty": "easy"
+  },
+  {
+    "question": "根据课件，强化学习与监督/无监督学习最直观的区别是什么？",
+    "ground_truth": "监督/无监督学习使用的是Fixed Data（固定数据），而强化学习是Agent与Dynamic Environment（动态环境）进行交互。",
+    "source_context": "有监督、无监督学习 Model <- Fixed Data；强化学习 Agent <-> Dynamic Environment",
+    "difficulty": "easy"
+  },
+  {
+    "question": "什么是占用度量（Occupancy Measure）？",
+    "ground_truth": "占用度量公式为：ρ^π(s,a) = E_{a~π(s),s'~p(s,a)}[∑_{t=0}^T γ^t p(s_t = s, a_t = a)]",
+    "source_context": "ρ^π(s,a) = E_{a~π(s),s'~p(s,a)}[∑_{t=0}^T γ^t p(s_t = s, a_t = a)]",
+    "difficulty": "easy"
+  },
+  {
+    "question": "给定策略π，价值函数 V^π(s) 的定义是什么？",
+    "ground_truth": "V^π(s) = E[R(s_0) + γR(s_1) + γ^2R(s_2) + … |s_0 = s, π]",
+    "source_context": "V^π(s) = E[R(s_0) + γR(s_1) + γ^2R(s_2) + … |s_0 = s, π]",
+    "difficulty": "easy"
+  },
+  {
+    "question": "描述MDP的动态过程（从状态s0开始）。",
+    "ground_truth": "从状态s_0开始，智能体选择动作a_0，得到奖励R(s_0, a_0)，MDP随机转移到下一个状态s_1，这个过程不断进行。",
+    "source_context": "从状态s_0开始，智能体选择某个动作a_0 ∈ A，智能体得到奖励 R(s_0, a_0)，MDP随机转移到下一个状态 s_1 ~ P_{s_0 a_0}，这个过程不断进行。",
+    "difficulty": "easy"
+  },
+  {
+    "question": "价值函数的Bellman等式是什么？",
+    "ground_truth": "V^π(s) = R(s) + γ ∑_{s∈S} P_{sπ(s)}(s') V^π(s')",
+    "source_context": "V^π(s) = R(s) + γ ∑_{s∈S} P_{sπ(s)}(s') V^π(s')",
+    "difficulty": "medium"
+  },
+  {
+    "question": "价值迭代的过程包含哪些步骤？",
+    "ground_truth": "1. 对每个状态s，初始化V(s)=0；2. 重复迭代直到收敛：V(s) = R(s) + max_{a∈A} γ ∑_{s'∈S} P_{sa}(s') V(s')",
+    "source_context": "1. 对每个状态s，初始化V(s)=0；2. 重复以下过程直到收敛：对每个状态，更新 V(s) = R(s) + max_{a∈A} γ ∑_{s'∈S} P_{sa}(s') V(s')",
+    "difficulty": "medium"
+  },
+  {
+    "question": "策略迭代的过程包含哪些步骤？",
+    "ground_truth": "1. 随机初始化策略π；2. 重复迭代直到收敛：a) 让 V := V^π；b) 更新 π(s) = arg max_{a∈A} ∑_{s'∈S} P_{sa}(s') V(s')",
+    "source_context": "1. 随机初始化策略π；2. 重复以下过程直到收敛：a) 让 V := V^π；b) 对每个状态，更新 π(s) = arg max_{a∈A} ∑_{s'∈S} P_{sa}(s') V(s')",
+    "difficulty": "medium"
+  },
+  {
+    "question": "同步价值迭代和异步价值迭代在实现上有什么区别？",
+    "ground_truth": "同步价值迭代会储存两份价值函数的拷贝（V_new 和 V_old），而异步价值迭代只储存一份价值函数。",
+    "source_context": "同步的价值迭代会储存两份价值函数的拷贝...异步价值迭代只储存一份价值函数",
+    "difficulty": "medium"
+  },
+  {
+    "question": "从“经验”中学习一个MDP模型时，如何估计状态转移概率 P_{sa}(s')？",
+    "ground_truth": "P_{sa}(s') = 在s下采取动作a并转移到s'的次数 / 在s下采取动作a的次数",
+    "source_context": "P_{sa}(s') = 在s下采取动作a并转移到s'的次数 / 在s下采取动作a的次数",
+    "difficulty": "medium"
+  },
+  {
+    "question": "最优价值函数 V*(s) 和最优策略 π*(s) 的关系是什么？",
+    "ground_truth": "最优价值函数 V*(s) = max_π V^π(s)。最优策略 π*(s) = arg max_{a∈A} ∑_{s'∈S} P_{sa}(s') V*(s')。并且 V*(s) = V^{π*}(s) ≥ V^π(s)",
+    "source_context": "V*(s) = max_π V^π(s)；π*(s) = arg max_{a∈A} ∑_{s'∈S} P_{sa}(s') V*(s')；V*(s) = V^{π*}(s) ≥ V^π(s)",
+    "difficulty": "medium"
+  },
+  {
+    "question": "根据定理，占用度量和策略存在怎样的关系？",
+    "ground_truth": "和同一个动态环境交互的两个策略π1和π2得到的占用度量ρ^{π1}和ρ^{π2}满足 ρ^{π1} = ρ^{π2} 当且仅当 π1 = π2。",
+    "source_context": "定理1: 和同一个动态环境交互的两个策略π1和π2得到的占用度量ρ^{π1}和ρ^{π2}满足 ρ^{π1} = ρ^{π2} iff π1 = π2",
+    "difficulty": "medium"
+  },
+  {
+    "question": "基于模型的强化学习中，学习模型&优化策略的算法步骤是什么？",
+    "ground_truth": "1. 随机初始化策略π；2. 重复迭代：a) 收集经验数据；b) 更新对P_{sa}和R的估计；c) 执行价值迭代得到新V；d) 根据V更新策略π为贪心策略。",
+    "source_context": "1. 随机初始化策略π；2. 重复迭代直到收敛：a) 执行π，收集经验；b) 更新P_{sa}和R的估计；c) 执行价值迭代，得到V；d) 根据V更新策略π为贪心策略。",
+    "difficulty": "medium"
+  },
+  {
+    "question": "价值迭代和策略迭代有哪些区别？对于空间较小和较大的MDP，分别更推荐哪种方法？",
+    "ground_truth": "价值迭代是贪心更新法；策略迭代用Bellman等式更新代价很大。空间较小的MDP策略迭代收敛快；空间较大的MDP价值迭代更实用；没有状态转移循环时最好用价值迭代。",
+    "source_context": "1. 价值迭代是贪心更新法 2. 策略迭代中, 用Bellman等式更新价值函数代价很大 3. 对于空间较小的MDP, 策略迭代通常很快收敛 4. 对于空间较大的MDP, 价值迭代更实用 (效率更高) 5. 如果没有状态转移循环, 最好使用价值迭代",
+    "difficulty": "hard"
+  },
+  {
+    "question": "在强化学习中，引入折扣因子γ（0≤γ≤1）的目的是什么？请结合金融例子说明。",
+    "ground_truth": "折扣因子使得智能体更重视即时奖励。以金融为例，今天的$1比明天的$1更有价值。",
+    "source_context": "γ ∈ [0,1] 是未来奖励的折扣因子, 使得和未来奖励相比起来智能体更重视即时奖励。以金融为例, 今天的$1比明天的$1更有价值",
+    "difficulty": "hard"
+  },
+  {
+    "question": "策略的累积奖励 V(π) 如何用占用度量 ρ^π(s,a) 和奖励函数 R(s,a) 表示？",
+    "ground_truth": "V(π) = ∑_{s,a} ρ^π(s,a)R(s,a) = E_π[R(s,a)]",
+    "source_context": "V(π) = ∑_{s,a} ρ^π(s,a)R(s,a) = E_π[R(s,a)]",
+    "difficulty": "hard"
+  },
+  {
+    "question": "在不知道环境动态（P和R）的情况下，有哪两种解决思路？它们的主要区别是什么？",
+    "ground_truth": "一种思路是学习MDP模型（基于模型）；另一种是不学习MDP，直接从经验中学习价值函数和策略（无模型强化学习，Model-free RL）。",
+    "source_context": "另一种解决方式是不学习MDP，从经验中直接学习价值函数和策略。也就是模型无关的强化学习 (Model-free Reinforcement Learning)",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,27 @@
+.env
+venv/
+.venv/
+__pycache__/
+
+# 本地模型（2GB+，不提交）
+models/
+
+# 向量库（可重建）
+chroma_db/
+
+# 中间产物（体积大，可重建）
+data/day3_challenge/
+data/day3_outputs/
+data/day3_outputs_challenge/
+data/day3_outputs_rl/
+data/day3_variant_outputs/
+
+# 未下载完的临时文件
+*.incomplete
+
+# VSCode 工作区设置
+.vscode/
+
+# 系统文件
+.DS_Store
+Thumbs.db
