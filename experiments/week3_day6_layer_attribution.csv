@@ -1,0 +1,12 @@
+﻿scheme,question,failure_layer,reason,faithfulness,llm_context_precision_with_reference,context_recall
+纯 LLM,什么是随机过程？,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+纯 LLM,什么是马尔可夫过程？,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+纯 LLM,马尔可夫决策过程（MDP）可以由哪五元组表示？,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+纯 LLM,在MDP的五元组中，γ代表什么？,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+纯 LLM,根据课件，强化学习与监督/无监督学习最直观的区别是什么？,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+纯 LLM,什么是占用度量（Occupancy Measure）？,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+纯 LLM,给定策略π，价值函数 V^π(s) 的定义是什么？,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+纯 LLM,描述MDP的动态过程（从状态s0开始）。,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+纯 LLM,价值函数的Bellman等式是什么？,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+纯 LLM,价值迭代的过程包含哪些步骤？,Query理解,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0
+基础 RAG,根据课件，强化学习与监督/无监督学习最直观的区别是什么？,检索,"分数: Faith=0.00, Prec=0.00, Recall=0.00",0.0,0.0,0.0

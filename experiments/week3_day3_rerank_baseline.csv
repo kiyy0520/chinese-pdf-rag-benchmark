@@ -1,0 +1,21 @@
+﻿query,method,recall@5,mrr,latency_ms,triggered,trigger_reason
+什么是随机过程？,conditional_rerank,1.0,1.0,300.75,True,一致性过低(0.33 < 0.66)，BM25与向量分歧大
+什么是马尔可夫过程？,conditional_rerank,1.0,1.0,0.03,False,候选集质量达标，无需Rerank
+马尔可夫决策过程（MDP）可以由哪五元组表示？,conditional_rerank,0.0,0.0,0.03,False,候选集质量达标，无需Rerank
+在MDP的五元组中，γ代表什么？,conditional_rerank,1.0,0.5,247.65,True,方差过低(0.0089 < 0.01)，初筛区分度不足
+根据课件，强化学习与监督/无监督学习最直观的区别是什么？,conditional_rerank,1.0,1.0,290.35,True,一致性过低(0.33 < 0.66)，BM25与向量分歧大
+什么是占用度量（Occupancy Measure）？,conditional_rerank,0.0,0.0,0.03,False,候选集质量达标，无需Rerank
+给定策略π，价值函数 V^π(s) 的定义是什么？,conditional_rerank,0.0,0.0,251.94,True,方差过低(0.0096 < 0.01)，初筛区分度不足
+描述MDP的动态过程（从状态s0开始）。,conditional_rerank,1.0,1.0,235.13,True,方差过低(0.0076 < 0.01)，初筛区分度不足
+价值函数的Bellman等式是什么？,conditional_rerank,0.0,0.0,0.03,False,候选集质量达标，无需Rerank
+价值迭代的过程包含哪些步骤？,conditional_rerank,1.0,1.0,0.04,False,候选集质量达标，无需Rerank
+策略迭代的过程包含哪些步骤？,conditional_rerank,1.0,1.0,0.03,False,候选集质量达标，无需Rerank
+同步价值迭代和异步价值迭代在实现上有什么区别？,conditional_rerank,1.0,1.0,0.03,False,候选集质量达标，无需Rerank
+从“经验”中学习一个MDP模型时，如何估计状态转移概率 P_{sa}(s')？,conditional_rerank,1.0,1.0,0.03,False,候选集质量达标，无需Rerank
+最优价值函数 V*(s) 和最优策略 π*(s) 的关系是什么？,conditional_rerank,1.0,1.0,251.64,True,方差过低(0.0069 < 0.01)，初筛区分度不足
+根据定理，占用度量和策略存在怎样的关系？,conditional_rerank,1.0,1.0,0.03,False,候选集质量达标，无需Rerank
+基于模型的强化学习中，学习模型&优化策略的算法步骤是什么？,conditional_rerank,1.0,1.0,0.03,False,候选集质量达标，无需Rerank
+价值迭代和策略迭代有哪些区别？对于空间较小和较大的MDP，分别更推荐哪种方法？,conditional_rerank,1.0,1.0,0.05,False,候选集质量达标，无需Rerank
+在强化学习中，引入折扣因子γ（0≤γ≤1）的目的是什么？请结合金融例子说明。,conditional_rerank,1.0,1.0,277.26,True,方差过低(0.0065 < 0.01)，初筛区分度不足
+"策略的累积奖励 V(π) 如何用占用度量 ρ^π(s,a) 和奖励函数 R(s,a) 表示？",conditional_rerank,0.0,0.0,273.22,True,一致性过低(0.00 < 0.66)，BM25与向量分歧大
+在不知道环境动态（P和R）的情况下，有哪两种解决思路？它们的主要区别是什么？,conditional_rerank,1.0,1.0,266.22,True,方差过低(0.0092 < 0.01)，初筛区分度不足

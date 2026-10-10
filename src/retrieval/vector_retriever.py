@@ -25,6 +25,6 @@ class VectorRetriever:
         
         doc_ids = query_res["ids"][0]
         distances = query_res["distances"][0]
-        scores = [1.0 - d for d in distances]
+        scores = [1.0 / (1.0 + d) for d in distances]
         
         return list(zip(doc_ids, scores))

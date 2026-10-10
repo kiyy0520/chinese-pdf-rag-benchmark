@@ -1,0 +1,4 @@
+﻿route_taken,faithfulness,llm_context_precision_with_reference,context_recall,count
+exact,1.0,0.8222222221927316,1.0,4
+hybrid,0.8888888888888888,0.7611111110862038,1.0,3
+semantic,1.0,0.999999999965,1.0,3

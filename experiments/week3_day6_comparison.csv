@@ -1,0 +1,4 @@
+﻿scheme,faithfulness,llm_context_precision_with_reference,context_recall
+基础 RAG,0.9,0.89999999997,0.9
+纯 LLM,0.0,0.0,0.0
+自适应 RAG,1.0,0.8655555555264677,1.0

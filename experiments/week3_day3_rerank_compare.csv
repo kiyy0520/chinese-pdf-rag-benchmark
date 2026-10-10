@@ -1,0 +1,61 @@
+﻿query,method,recall@5,mrr,latency_ms,triggered,trigger_reason
+什么是随机过程？,pure_vector,1.0,1.0,0.01,False,
+什么是随机过程？,always_rerank,1.0,1.0,241.69,True,always
+什么是随机过程？,conditional_rerank,1.0,1.0,210.7,True,一致性过低(0.33 < 0.66)，BM25与向量分歧大
+什么是马尔可夫过程？,pure_vector,1.0,1.0,0.01,False,
+什么是马尔可夫过程？,always_rerank,1.0,1.0,209.94,True,always
+什么是马尔可夫过程？,conditional_rerank,1.0,1.0,0.1,False,候选集质量达标，无需Rerank
+马尔可夫决策过程（MDP）可以由哪五元组表示？,pure_vector,0.0,0.0,0.0,False,
+马尔可夫决策过程（MDP）可以由哪五元组表示？,always_rerank,0.0,0.0,271.76,True,always
+马尔可夫决策过程（MDP）可以由哪五元组表示？,conditional_rerank,0.0,0.0,266.54,True,一致性过低(0.33 < 0.66)，BM25与向量分歧大
+在MDP的五元组中，γ代表什么？,pure_vector,1.0,1.0,0.0,False,
+在MDP的五元组中，γ代表什么？,always_rerank,1.0,1.0,205.15,True,always
+在MDP的五元组中，γ代表什么？,conditional_rerank,1.0,1.0,0.09,False,候选集质量达标，无需Rerank
+根据课件，强化学习与监督/无监督学习最直观的区别是什么？,pure_vector,0.0,0.0,0.01,False,
+根据课件，强化学习与监督/无监督学习最直观的区别是什么？,always_rerank,1.0,1.0,238.09,True,always
+根据课件，强化学习与监督/无监督学习最直观的区别是什么？,conditional_rerank,1.0,1.0,271.97,True,方差过低(0.0072 < 0.01)，初筛区分度不足
+什么是占用度量（Occupancy Measure）？,pure_vector,0.0,0.0,0.0,False,
+什么是占用度量（Occupancy Measure）？,always_rerank,0.0,0.0,269.11,True,always
+什么是占用度量（Occupancy Measure）？,conditional_rerank,0.0,0.0,0.08,False,候选集质量达标，无需Rerank
+给定策略π，价值函数 V^π(s) 的定义是什么？,pure_vector,0.0,0.0,0.0,False,
+给定策略π，价值函数 V^π(s) 的定义是什么？,always_rerank,0.0,0.0,232.58,True,always
+给定策略π，价值函数 V^π(s) 的定义是什么？,conditional_rerank,0.0,0.0,231.94,True,方差过低(0.0059 < 0.01)，初筛区分度不足
+描述MDP的动态过程（从状态s0开始）。,pure_vector,1.0,1.0,0.0,False,
+描述MDP的动态过程（从状态s0开始）。,always_rerank,1.0,1.0,230.73,True,always
+描述MDP的动态过程（从状态s0开始）。,conditional_rerank,1.0,1.0,229.18,True,方差过低(0.0064 < 0.01)，初筛区分度不足
+价值函数的Bellman等式是什么？,pure_vector,0.0,0.0,0.0,False,
+价值函数的Bellman等式是什么？,always_rerank,0.0,0.0,247.14,True,always
+价值函数的Bellman等式是什么？,conditional_rerank,0.0,0.0,0.11,False,候选集质量达标，无需Rerank
+价值迭代的过程包含哪些步骤？,pure_vector,1.0,1.0,0.0,False,
+价值迭代的过程包含哪些步骤？,always_rerank,1.0,1.0,224.88,True,always
+价值迭代的过程包含哪些步骤？,conditional_rerank,1.0,1.0,0.11,False,候选集质量达标，无需Rerank
+策略迭代的过程包含哪些步骤？,pure_vector,0.0,0.0,0.0,False,
+策略迭代的过程包含哪些步骤？,always_rerank,0.0,0.0,256.61,True,always
+策略迭代的过程包含哪些步骤？,conditional_rerank,0.0,0.0,0.11,False,候选集质量达标，无需Rerank
+同步价值迭代和异步价值迭代在实现上有什么区别？,pure_vector,1.0,1.0,0.0,False,
+同步价值迭代和异步价值迭代在实现上有什么区别？,always_rerank,1.0,1.0,226.57,True,always
+同步价值迭代和异步价值迭代在实现上有什么区别？,conditional_rerank,1.0,1.0,0.08,False,候选集质量达标，无需Rerank
+从“经验”中学习一个MDP模型时，如何估计状态转移概率 P_{sa}(s')？,pure_vector,1.0,1.0,0.01,False,
+从“经验”中学习一个MDP模型时，如何估计状态转移概率 P_{sa}(s')？,always_rerank,1.0,1.0,198.63,True,always
+从“经验”中学习一个MDP模型时，如何估计状态转移概率 P_{sa}(s')？,conditional_rerank,1.0,1.0,0.07,False,候选集质量达标，无需Rerank
+最优价值函数 V*(s) 和最优策略 π*(s) 的关系是什么？,pure_vector,1.0,1.0,0.0,False,
+最优价值函数 V*(s) 和最优策略 π*(s) 的关系是什么？,always_rerank,1.0,1.0,240.68,True,always
+最优价值函数 V*(s) 和最优策略 π*(s) 的关系是什么？,conditional_rerank,1.0,1.0,276.41,True,方差过低(0.0087 < 0.01)，初筛区分度不足
+根据定理，占用度量和策略存在怎样的关系？,pure_vector,1.0,1.0,0.01,False,
+根据定理，占用度量和策略存在怎样的关系？,always_rerank,1.0,1.0,241.33,True,always
+根据定理，占用度量和策略存在怎样的关系？,conditional_rerank,1.0,1.0,0.08,False,候选集质量达标，无需Rerank
+基于模型的强化学习中，学习模型&优化策略的算法步骤是什么？,pure_vector,1.0,1.0,0.01,False,
+基于模型的强化学习中，学习模型&优化策略的算法步骤是什么？,always_rerank,1.0,1.0,287.67,True,always
+基于模型的强化学习中，学习模型&优化策略的算法步骤是什么？,conditional_rerank,1.0,1.0,286.58,True,方差过低(0.0097 < 0.01)，初筛区分度不足
+价值迭代和策略迭代有哪些区别？对于空间较小和较大的MDP，分别更推荐哪种方法？,pure_vector,1.0,1.0,0.01,False,
+价值迭代和策略迭代有哪些区别？对于空间较小和较大的MDP，分别更推荐哪种方法？,always_rerank,1.0,1.0,240.1,True,always
+价值迭代和策略迭代有哪些区别？对于空间较小和较大的MDP，分别更推荐哪种方法？,conditional_rerank,1.0,1.0,0.08,False,候选集质量达标，无需Rerank
+在强化学习中，引入折扣因子γ（0≤γ≤1）的目的是什么？请结合金融例子说明。,pure_vector,1.0,1.0,0.01,False,
+在强化学习中，引入折扣因子γ（0≤γ≤1）的目的是什么？请结合金融例子说明。,always_rerank,1.0,1.0,308.07,True,always
+在强化学习中，引入折扣因子γ（0≤γ≤1）的目的是什么？请结合金融例子说明。,conditional_rerank,1.0,1.0,307.04,True,方差过低(0.0052 < 0.01)，初筛区分度不足
+"策略的累积奖励 V(π) 如何用占用度量 ρ^π(s,a) 和奖励函数 R(s,a) 表示？",pure_vector,0.0,0.0,0.01,False,
+"策略的累积奖励 V(π) 如何用占用度量 ρ^π(s,a) 和奖励函数 R(s,a) 表示？",always_rerank,0.0,0.0,283.24,True,always
+"策略的累积奖励 V(π) 如何用占用度量 ρ^π(s,a) 和奖励函数 R(s,a) 表示？",conditional_rerank,0.0,0.0,298.67,True,一致性过低(0.33 < 0.66)，BM25与向量分歧大
+在不知道环境动态（P和R）的情况下，有哪两种解决思路？它们的主要区别是什么？,pure_vector,0.0,0.0,0.01,False,
+在不知道环境动态（P和R）的情况下，有哪两种解决思路？它们的主要区别是什么？,always_rerank,1.0,1.0,307.23,True,always
+在不知道环境动态（P和R）的情况下，有哪两种解决思路？它们的主要区别是什么？,conditional_rerank,1.0,1.0,318.46,True,方差过低(0.0098 < 0.01)，初筛区分度不足
