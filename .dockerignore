@@ -27,6 +27,8 @@ data/day2_pdfs/
 data/day3_outputs/
 data/day3_challenge/
 data/day3_variant_outputs/
+data/day3_outputs_challenge/
+data/day3_outputs_rl/
 
 # VSCode 配置
 .vscode/

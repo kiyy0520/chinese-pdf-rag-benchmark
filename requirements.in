@@ -1,0 +1,99 @@
+--extra-index-url https://mirror.sjtu.edu.cn/pytorch-wheels/cpu/
+--extra-index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+# ==========================================
+# 核心 Web 与 API 框架
+# ==========================================
+fastapi
+uvicorn[standard]
+python-multipart
+
+# ==========================================
+# 数据校验与配置
+# ==========================================
+pydantic
+pydantic-settings
+python-dotenv
+
+# ==========================================
+# 核心 RAG 与 LangChain 生态
+# ==========================================
+langchain
+langchain-community
+langchain-openai
+langgraph
+chromadb
+
+# ==========================================
+# 模型与推理
+# ==========================================
+sentence-transformers
+FlagEmbedding
+transformers<5.0.0
+torch==2.6.0+cpu
+torchvision==0.21.0+cpu
+
+# ==========================================
+# PDF 处理与文档解析
+# ==========================================
+pypdf
+PyMuPDF
+pdf2image
+pdfminer.six
+unstructured
+unstructured-client
+olefile
+filetype
+
+# ==========================================
+# 评估与指标
+# ==========================================
+ragas
+datasets
+
+# ==========================================
+# 文本处理与工具
+# ==========================================
+jieba
+nltk
+tiktoken
+regex
+validators
+emoji
+xxhash
+mmh3
+
+# ==========================================
+# 数据库与缓存
+# ==========================================
+SQLAlchemy
+diskcache
+
+# ==========================================
+# 异步与网络
+# ==========================================
+aiohttp
+httpx
+requests
+urllib3
+tenacity
+backoff
+
+# ==========================================
+# 日志与监控
+# ==========================================
+tqdm
+colorama
+opentelemetry-api
+opentelemetry-sdk
+
+# ==========================================
+# 图像处理
+# ==========================================
+opencv-python
+pillow
+
+# ==========================================
+# OpenAI 兼容客户端
+# ==========================================
+openai
