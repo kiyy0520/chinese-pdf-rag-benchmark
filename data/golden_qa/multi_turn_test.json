@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "scene": "指代消解",
+    "dialogue": [
+      {"turn": 1, "query": "我想买一台手机"},
+      {"turn": 2, "query": "它拍照效果怎么样？"},
+      {"turn": 3, "query": "预算5000以内有推荐吗？"}
+    ],
+    "expected_state": {
+      "current_entities": ["手机", "拍照", "预算5000"],
+      "confirmed_info": {"预算": "5000"},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 2,
+    "scene": "指代消解",
+    "dialogue": [
+      {"turn": 1, "query": "推荐一款轻薄的笔记本电脑"},
+      {"turn": 2, "query": "这款的重量是多少？"},
+      {"turn": 3, "query": "它的续航时间长吗？"}
+    ],
+    "expected_state": {
+      "current_entities": ["笔记本电脑", "轻薄", "重量", "续航"],
+      "confirmed_info": {},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 3,
+    "scene": "指代消解",
+    "dialogue": [
+      {"turn": 1, "query": "想买双跑鞋"},
+      {"turn": 2, "query": "这个有减震功能吗？"},
+      {"turn": 3, "query": "那它的尺码怎么选？"}
+    ],
+    "expected_state": {
+      "current_entities": ["跑鞋", "减震", "尺码"],
+      "confirmed_info": {},
+      "pending_questions": ["尺码"],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 4,
+    "scene": "指代消解",
+    "dialogue": [
+      {"turn": 1, "query": "扫地机器人哪个牌子好"},
+      {"turn": 2, "query": "它工作的时候噪音大不大？"},
+      {"turn": 3, "query": "那这个能拖地吗？"}
+    ],
+    "expected_state": {
+      "current_entities": ["扫地机器人", "噪音", "拖地"],
+      "confirmed_info": {},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 5,
+    "scene": "话题切换",
+    "dialogue": [
+      {"turn": 1, "query": "我想买个手机，预算5000"},
+      {"turn": 2, "query": "对了，电脑也推荐一下"},
+      {"turn": 3, "query": "电脑主要用来办公，要轻薄"}
+    ],
+    "expected_state": {
+      "current_entities": ["电脑", "办公", "轻薄"],
+      "confirmed_info": {"用途": "办公"},
+      "pending_questions": [],
+      "topic_switch_flag": true
+    }
+  },
+  {
+    "id": 6,
+    "scene": "话题切换",
+    "dialogue": [
+      {"turn": 1, "query": "帮我规划一下去北京的旅游攻略"},
+      {"turn": 2, "query": "那边有什么好吃的？"},
+      {"turn": 3, "query": "对了，帮我看看去上海的酒店"}
+    ],
+    "expected_state": {
+      "current_entities": ["上海", "酒店"],
+      "confirmed_info": {},
+      "pending_questions": [],
+      "topic_switch_flag": true
+    }
+  },
+  {
+    "id": 7,
+    "scene": "话题切换",
+    "dialogue": [
+      {"turn": 1, "query": "有没有适合减肥的食谱"},
+      {"turn": 2, "query": "那配合什么运动比较好？"},
+      {"turn": 3, "query": "你刚才说的食谱里，早餐吃燕麦可以吗？"}
+    ],
+    "expected_state": {
+      "current_entities": ["食谱", "运动", "早餐", "燕麦"],
+      "confirmed_info": {},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 8,
+    "scene": "话题切换",
+    "dialogue": [
+      {"turn": 1, "query": "现在买什么显卡比较划算"},
+      {"turn": 2, "query": "那搭配什么CPU好？"},
+      {"turn": 3, "query": "算了，还是先给我推荐个显卡吧"}
+    ],
+    "expected_state": {
+      "current_entities": ["显卡"],
+      "confirmed_info": {},
+      "pending_questions": [],
+      "topic_switch_flag": true
+    }
+  },
+  {
+    "id": 9,
+    "scene": "追问",
+    "dialogue": [
+      {"turn": 1, "query": "推荐一款手机"},
+      {"turn": 2, "query": "那预算5000左右呢？"},
+      {"turn": 3, "query": "拍照好的有吗？"}
+    ],
+    "expected_state": {
+      "current_entities": ["手机", "预算5000", "拍照"],
+      "confirmed_info": {"预算": "5000"},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 10,
+    "scene": "追问",
+    "dialogue": [
+      {"turn": 1, "query": "帮我找找租房信息"},
+      {"turn": 2, "query": "要朝阳的"},
+      {"turn": 3, "query": "离地铁近一点的呢？"}
+    ],
+    "expected_state": {
+      "current_entities": ["租房", "朝阳", "地铁"],
+      "confirmed_info": {"朝向": "朝阳"},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 11,
+    "scene": "追问",
+    "dialogue": [
+      {"turn": 1, "query": "我想学Python"},
+      {"turn": 2, "query": "有入门教程吗？"},
+      {"turn": 3, "query": "大概多久能学会？"}
+    ],
+    "expected_state": {
+      "current_entities": ["Python", "入门教程", "学习周期"],
+      "confirmed_info": {},
+      "pending_questions": ["学习周期"],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 12,
+    "scene": "追问",
+    "dialogue": [
+      {"turn": 1, "query": "想买个相机"},
+      {"turn": 2, "query": "微单和单反选哪个好？"},
+      {"turn": 3, "query": "索尼的怎么样？"}
+    ],
+    "expected_state": {
+      "current_entities": ["相机", "微单", "单反", "索尼"],
+      "confirmed_info": {},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 13,
+    "scene": "省略补全",
+    "dialogue": [
+      {"turn": 1, "query": "我想买个手机"},
+      {"turn": 2, "query": "要拍照好的"},
+      {"turn": 3, "query": "预算6000以内"}
+    ],
+    "expected_state": {
+      "current_entities": ["手机", "拍照", "预算6000"],
+      "confirmed_info": {"预算": "6000"},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 14,
+    "scene": "省略补全",
+    "dialogue": [
+      {"turn": 1, "query": "推荐笔记本电脑"},
+      {"turn": 2, "query": "要轻薄的"},
+      {"turn": 3, "query": "14寸的"}
+    ],
+    "expected_state": {
+      "current_entities": ["笔记本电脑", "轻薄", "14寸"],
+      "confirmed_info": {"尺寸": "14寸"},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 15,
+    "scene": "省略补全",
+    "dialogue": [
+      {"turn": 1, "query": "买个耳机"},
+      {"turn": 2, "query": "要降噪的"},
+      {"turn": 3, "query": "价格1000左右"}
+    ],
+    "expected_state": {
+      "current_entities": ["耳机", "降噪", "价格1000"],
+      "confirmed_info": {"价格": "1000"},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 16,
+    "scene": "省略补全",
+    "dialogue": [
+      {"turn": 1, "query": "想租房子"},
+      {"turn": 2, "query": "两室一厅的"},
+      {"turn": 3, "query": "月租3000以内的"}
+    ],
+    "expected_state": {
+      "current_entities": ["租房子", "两室一厅", "月租3000"],
+      "confirmed_info": {"月租": "3000"},
+      "pending_questions": [],
+      "topic_switch_flag": false
+    }
+  },
+  {
+    "id": 17,
+    "scene": "话题回退",
+    "dialogue": [
+      {"turn": 1, "query": "推荐一款手机"},
+      {"turn": 2, "query": "那电脑有什么推荐？"},
+      {"turn": 3, "query": "还是说回手机吧，刚才那个拍照好的"}
+    ],
+    "expected_state": {
+      "current_entities": ["手机", "拍照"],
+      "confirmed_info": {},
+      "pending_questions": [],
+      "topic_switch_flag": true
+    }
+  },
+  {
+    "id": 18,
+    "scene": "话题回退",
+    "dialogue": [
+      {"turn": 1, "query": "我想买跑鞋"},
+      {"turn": 2, "query": "有没有运动服推荐？"},
+      {"turn": 3, "query": "刚才的跑鞋，有减震的吗？"}
+    ],
+    "expected_state": {
+      "current_entities": ["跑鞋", "减震"],
+      "confirmed_info": {},
+      "pending_questions": [],
+      "topic_switch_flag": true
+    }
+  },
+  {
+    "id": 19,
+    "scene": "话题回退",
+    "dialogue": [
+      {"turn": 1, "query": "现在什么显卡好"},
+      {"turn": 2, "query": "显示器选什么？"},
+      {"turn": 3, "query": "继续聊显卡吧，预算4000的"}
+    ],
+    "expected_state": {
+      "current_entities": ["显卡", "预算4000"],
+      "confirmed_info": {"预算": "4000"},
+      "pending_questions": [],
+      "topic_switch_flag": true
+    }
+  },
+  {
+    "id": 20,
+    "scene": "话题回退",
+    "dialogue": [
+      {"turn": 1, "query": "推荐一款咖啡机"},
+      {"turn": 2, "query": "那咖啡豆买哪种？"},
+      {"turn": 3, "query": "还是回到咖啡机吧，要全自动的"}
+    ],
+    "expected_state": {
+      "current_entities": ["咖啡机", "全自动"],
+      "confirmed_info": {},
+      "pending_questions": [],
+      "topic_switch_flag": true
+    }
+  }
+]
