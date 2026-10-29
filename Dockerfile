@@ -12,27 +12,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# 安装 uv
-RUN pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple uv
-
 # 拷贝依赖声明文件
 COPY requirements.in .
 
-# 解析并安装依赖
-RUN uv pip compile requirements.in -o requirements.txt \
-        --index-strategy unsafe-best-match \
-        --index-url https://pypi.tuna.tsinghua.edu.cn/simple \
-        --extra-index-url https://mirror.sjtu.edu.cn/pytorch-wheels/cpu/ \
-    && uv pip install --system -r requirements.txt \
-        --index-strategy unsafe-best-match \
-        --index-url https://pypi.tuna.tsinghua.edu.cn/simple \
-        --extra-index-url https://mirror.sjtu.edu.cn/pytorch-wheels/cpu/
+# 【已修改】直接使用 pip 快速安装，跳过耗时的 uv compile 解析
+RUN pip install --no-cache-dir -r requirements.in \
+    --index-url https://pypi.tuna.tsinghua.edu.cn/simple \
+    --extra-index-url https://mirror.sjtu.edu.cn/pytorch-wheels/cpu/
 
 # 拷贝源码与数据
 COPY src/ ./src/
 COPY experiments/ ./experiments/
 COPY data/ ./data/
-# 【新增】把你根目录下的运行脚本也拷进去，不然容器里找不到
+
+# 把你根目录下的运行脚本也拷进去
 COPY run_week4_day6_comparison.py .
 COPY run_week4_day6_ragas_eval.py .
 
@@ -42,5 +35,5 @@ ENV PYTHONUNBUFFERED=1
 
 EXPOSE 8000
 
-# 默认启动 API 服务（如果要在容器跑评测，可以 docker run 时覆盖此命令）
+# 默认启动 API 服务
 CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
